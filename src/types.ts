@@ -1,67 +1,59 @@
-export interface TimelineItem {
+export interface TimelineEvent {
   year: string;
   title: string;
-  institution: string;
+  organization: string;
   description: string;
-  details: string[];
-  type: 'academic' | 'professional' | 'honor';
+  category: 'education' | 'experience' | 'achievement' | 'research';
+  tags?: string[];
 }
 
 export interface ResearchInterest {
   id: string;
   title: string;
-  description: string;
-  icon: string;
   directions: string[];
   projects: string[];
-  color: string;
+  description: string;
+  iconName: string; // lucide icon name
 }
 
 export interface Publication {
   title: string;
-  authors: string;
   journal: string;
   year: string;
+  authors: string[];
   doi: string;
-  abstract: string;
   citation: string;
+  abstract: string;
   impactMetrics: {
     label: string;
-    value: number;
-    color: string;
+    value: string;
+    description: string;
   }[];
 }
 
 export interface Project {
+  id: string;
   title: string;
-  description: string;
-  category: string;
   technologies: string[];
-  githubUrl: string;
-  keyContributions: string[];
-  metrics?: string;
-  extendedCaseStudy?: string;
-  imageAccent: string; // Tailwind gradient class
+  description: string;
+  longDescription: string;
+  githubUrl?: string;
+  links?: { label: string; url: string }[];
+  category: string;
+  imagePlaceholderColor: string; // for high-tech svg or CSS graphics
+  images?: string[]; // can support actual mock visual grids or carousel URLs
+  keyFeatures: string[];
+  researchImpact?: string;
 }
 
 export interface SkillNode {
   name: string;
-  proficiency: number; // 0 to 100
+  category: 'programming' | 'aiml' | 'data' | 'tools';
+  proficiency: number; // 0 to 100 for connection density / pulse duration
 }
 
-export interface SkillCategory {
-  title: string;
-  skills: SkillNode[];
-  icon: string;
-  color: string;
-}
-
-export interface EducationItem {
-  degree: string;
-  program: string;
-  institution: string;
-  duration: string;
-  grade?: string;
-  courses: string[];
-  logoText: string;
+export interface SkillLink {
+  source: string;
+  target: string;
+  strength?: number;
 }
