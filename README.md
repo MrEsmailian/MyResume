@@ -1,20 +1,44 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# MyResume
 
-# Run and deploy your AI Studio app
+Source code for a personal portfolio website hosted via GitHub Pages.
 
-This contains everything you need to run your app locally.
+The repository contains the static assets and frontend implementation used to build and deploy the website. The site serves as a centralized presentation of academic, research, and professional work, including projects, publications, experience, and technical activities.
 
-View your app in AI Studio: https://ai.studio/apps/24492a98-0850-4b19-bff8-e332acfc7c40
+## Overview
 
-## Run Locally
+This repository is intended to:
 
-**Prerequisites:**  Node.js
+* Maintain the source code of the portfolio website
+* Provide a reproducible version-controlled record of website updates
+* Enable deployment through GitHub Pages
+* Serve as a public-facing entry point to ongoing work and achievements
 
+## Structure
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```text
+.
+├── assets/          # Images, icons, and static resources
+├── css/             # Stylesheets
+├── js/              # Client-side scripts
+├── index.html       # Main entry point
+└── ...
+```
+
+## Deployment
+
+The website is automatically deployed through GitHub Pages from the repository's configured branch.
+
+## Local Development
+
+Clone the repository and open `index.html` in a browser, or serve the project using any static web server.
+
+```bash
+git clone https://github.com/MrEsmailian/MyResume.git
+cd MyResume
+```
+
+## Website
+
+Visit the live website here:
+
+https://mresmailian.github.io/MyResume/
